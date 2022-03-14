@@ -26,10 +26,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 
   " Git
-  Plug 'tpope/vim-fugitive'
-  Plug 'tpope/vim-rhubarb'
-  Plug 'mhinz/vim-signify'
-  Plug 'junegunn/gv.vim'
+  "Plug 'tpope/vim-fugitive'
+  "Plug 'tpope/vim-rhubarb'
+  "Plug 'mhinz/vim-signify'
+  "Plug 'junegunn/gv.vim'
 
   " Vim Script
   call plug#end() 
