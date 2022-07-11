@@ -1,20 +1,24 @@
 call plug#begin('~/.vim/plugged')
-  Plug 'fatih/vim-go'
-  Plug 'tweekmonster/hl-goimport.vim', { 'for': 'go' }
-  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' , 'for':'go'}
-  Plug 'luochen1990/rainbow'
-  Plug 'junegunn/vim-emoji'
-  Plug 'tpope/vim-surround'   
-  Plug 'ryanoasis/vim-devicons'
+  "Plug 'fatih/vim-go'
+  "Plug 'tweekmonster/hl-goimport.vim', { 'for': 'go' }
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'}
+  Plug 'SirVer/ultisnips'
+  "Plug 'luochen1990/rainbow'
+  "Plug 'junegunn/vim-emoji'
+  "Plug 'tpope/vim-surround'   
+  "Plug 'ryanoasis/vim-devicons'
   "Plug 'itchyny/lightline.vim'
   "Plug 'josa42/vim-lightline-coc'
-  Plug 'google/vim-colorscheme-primary'
-  Plug 'joshdick/onedark.vim'
+  "Plug 'google/vim-colorscheme-primary'
+  "Plug 'joshdick/onedark.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'uarun/vim-protobuf'
+  "Plug 'uarun/vim-protobuf'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   
+  " goimports
+  "Plug 'mattn/vim-goimoirts'
+
   " Theme
   Plug 'chriskempson/base16-vim'
 
@@ -61,32 +65,44 @@ call plug#begin('~/.vim/plugged')
   let g:rainbow_active = 1
 
   " Go的設定
-    let g:go_fmt_command = "goimports"
-    let g:go_highlight_functions = 1
-    let g:go_highlight_methods = 1
-    let g:go_highlight_structs = 1
-    let g:go_highlight_operators = 1
-    let g:go_highlight_build_constraints = 1
-    let g:go_test_timeout = '30s'
-    let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-    let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+  "let g:go_fmt_command = "goimports"
+  "let g:goimports = 1
+  "let g:goimports = 1
+  "let g:goimports_cmd = 'goimports'
+  "let g:goimports_simplify_cmd = 'gofmt'
+  
+  " GoAddTags 小駝峰
+  let g:go_addtags_transform = "camelcase"
+
+
+
+    "let g:go_highlight_functions = 1
+    "let g:go_highlight_methods = 1
+    "let g:go_highlight_structs = 1
+    "let g:go_highlight_operators = 1
+    "let g:go_highlight_build_constraints = 1
+    "let g:go_test_timeout = '30s'
+    "let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+	"let g:syntastic_mode_map = { 'mode': 'active','passtive_fileetypes':['go']}
+    "let g:syntastic_go_checkers = ['go']
     "let g:go_auto_sameids = 1
-    let g:go_snippet_engine = 'ultisnips'
-    let g:go_doc_popup_window = 1
-    let g:go_metalinter_command='golangci-lint'
+    "let g:go_snippet_engine = 'ultisnips'
+    "let g:go_doc_popup_window = 1
+    "let g:go_metalinter_command='golangci-lint'
     " gopls
-    let g:go_def_mode='gopls'
-    let g:go_info_mode='gopls'
-    "let g:go_debug=['lsp']
+    "let g:go_def_mode='gopls'
+    "let g:go_info_mode='gopls'
+	"let g:go_debug=['lsp']
     " set to use coc.vim -> disable vim-go: GoDef short cut
-    let g:go_def_mapping_enabled = 0
-    let g:go_doc_keywordprg_enabled = 0
-    let g:go_gopls_enabled = 0
-    let g:go_gopls_options = ['-remote=auto']
-    let g:go_fmt_autosave = 0
+    "let g:go_def_mapping_enabled = 0
+    "let g:go_doc_keywordprg_enabled = 0
+    "let g:go_gopls_enabled = 0
+    "let g:go_gopls_options = ['-remote=auto']
+    "let g:go_fmt_autosave = 0
 
 " 儲存同時引入包
-  nmap <space>w :w <bar> :GoImports <CR>
+  nmap <space>w :w <CR>
+  "nmap <space>w :w <bar> :GoImports <CR>
   nmap <space>q :q <CR>
 
 " coc_explorer setting
