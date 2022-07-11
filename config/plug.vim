@@ -22,6 +22,12 @@ call plug#begin(s:plug_dir)
   Plug 'preservim/nerdcommenter'
   Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 
+  " JavaScript
+  Plug 'sheerun/vim-polyglot'
+
+  " Ale
+  Plug 'dense-analysis/ale'
+
   " Angular
   Plug 'burnettk/vim-angular'
 
