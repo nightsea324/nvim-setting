@@ -10,7 +10,8 @@
       "floating-width": 100
     }
   },
-  "prettier.tabWidth":4, // format tabWidth
+  "prettier.tabWidth": 4, // format tabWidth
+  "prettier.formatter": 1,
   "explorer.file.hiddenRules": {
     "extensions": ["o", "a", "obj", "pyc"],
     "filenames": [".git", ".DS_Store", ".vscode"],
@@ -69,7 +70,7 @@
   },
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
-    "Markdown",
+    "markdown",
     "yaml",
     "javascript",
     "json",

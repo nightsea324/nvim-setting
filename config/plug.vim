@@ -29,7 +29,10 @@ call plug#begin(s:plug_dir)
   " Ale
   Plug 'dense-analysis/ale'
 
+  " git 
+  Plug 'airblade/vim-gitgutter'
+  
   " Angular
   "Plug 'burnettk/vim-angular'
-
+  
 call plug#end()

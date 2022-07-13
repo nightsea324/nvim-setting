@@ -6,10 +6,11 @@
   set encoding=utf-8
   set cursorline                " 加強顯示鼠標位置
   scriptencoding utf-8
+  set mouse=a                   " 啟用滑鼠
 
 " formatting
   set nowrap            " Do not wrap long lines
-  set smartindent
+  set smartindent       " 自動縮排
   set shiftwidth=4      " tab長度
   set expandtab         " Tabs are spaces, not tabs
   set tabstop=4         " 縮排空格數
@@ -17,7 +18,6 @@
   set nojoinspaces      " Prevents inserting two spaces after punctuation on a join (J)
   set splitright        " Puts new vsplit windows to the right of the current
   set splitbelow        " Puts new split windows to the bottom of the current
-  set autoindent   
 
 " color-schema
   syntax on
@@ -39,3 +39,15 @@
 " QuickSave
   nmap <space>w :w <CR>
   nmap <space>q :q <CR>
+
+" 自動補齊括號、引號
+  inoremap ( ()<ESC>i
+  inoremap [ []<ESC>i
+  inoremap { {}<ESC>i
+  inoremap < <><ESC>i
+  inoremap ‘ ‘‘<ESC>i
+  inoremap " ""<ESC>i
+  inoremap ` ``<ESC>i
+
+" NoHighlight
+  nmap <space>/ :noh <CR>
