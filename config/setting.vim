@@ -7,7 +7,6 @@
   set cursorline                " 加強顯示鼠標位置
   scriptencoding utf-8
   set mouse=a                   " 啟用滑鼠
-
 " formatting
   set nowrap            " Do not wrap long lines
   set smartindent       " 自動縮排
@@ -40,12 +39,12 @@
   nmap <space>w :w <CR>
   nmap <space>q :q <CR>
 
-" 自動補齊括號、引號
+" 自動補齊括號、引號
   inoremap ( ()<ESC>i
   inoremap [ []<ESC>i
   inoremap { {}<ESC>i
   inoremap < <><ESC>i
-  inoremap ‘ ‘‘<ESC>i
+  inoremap ' ''<ESC>i
   inoremap " ""<ESC>i
   inoremap ` ``<ESC>i
 
