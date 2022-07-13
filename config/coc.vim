@@ -1,4 +1,4 @@
-" For coc config
+" coc.vim => For coc config
 
 if isdirectory(expand('~/.vim/plugged/coc.nvim'))
   " coc_explorer setting

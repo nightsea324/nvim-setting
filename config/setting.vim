@@ -1,4 +1,4 @@
-" Setting.vim => base setting
+" setting.vim => For base setting
 
 " base 
   set number                    " 設定行號

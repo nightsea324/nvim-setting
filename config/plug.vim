@@ -1,4 +1,4 @@
-" Plug.vim => for plug
+" plug.vim => For plug
 
 " set dir_path
 let s:plug_dir = '~/.vim/plugged'
@@ -24,11 +24,12 @@ call plug#begin(s:plug_dir)
 
   " JavaScript
   Plug 'sheerun/vim-polyglot'
+  Plug 'prabirshrestha/vim-lsp'
 
   " Ale
   Plug 'dense-analysis/ale'
 
   " Angular
-  Plug 'burnettk/vim-angular'
+  "Plug 'burnettk/vim-angular'
 
 call plug#end()
