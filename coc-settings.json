@@ -1,6 +1,7 @@
 {
   "json.enable": true,
   "json.format.enable": true,
+  // explorer
   "explorer.presets": {
     ".vim": {
       "root-uri": "~/.vim"
@@ -10,8 +11,6 @@
       "floating-width": 100
     }
   },
-  "prettier.tabWidth": 4, // format tabWidth
-  "prettier.formatter": 1,
   "explorer.file.hiddenRules": {
     "extensions": ["o", "a", "obj", "pyc"],
     "filenames": [".git", ".DS_Store", ".vscode"],
@@ -68,6 +67,7 @@
     "<<": "gitStage",
     ">>": "gitUnstage"
   },
+  // coc format prettier
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "markdown",
@@ -77,12 +77,16 @@
     "go",
     "proto"
   ],
-  "snippets.ultisnips.directories": ["gosnippets/UltiSnips"],
-  // coc-go
-  "go.goplsOptions": {
-    "completeUnimported": true,
-    "usePlaceholders": true
+  "prettier.tabWidth": 4,
+  "prettier.singleQuote": true,
+  "prettier.arrowParens": "avoid",
+  // snippets
+  "snippets.extends":{
+      "js": ["javascript"],
+      "javascriptreact": ["javascript"],
+      "typescript": ["javascript"]
   },
+  // lsp
   "languageserver": {
       "golang": {
        "command": "gopls",
