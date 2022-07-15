@@ -70,9 +70,9 @@
   // coc format prettier
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
-    "markdown",
     "yaml",
     "javascript",
+    "typescript",
     "json",
     "go",
     "proto"
@@ -86,6 +86,9 @@
       "javascriptreact": ["javascript"],
       "typescript": ["javascript"]
   },
+  // eslint
+  "eslint.run": "onSave",
+  "eslint.autoFixOnSave": true,
   // lsp
   "languageserver": {
       "golang": {
