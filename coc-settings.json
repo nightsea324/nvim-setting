@@ -75,6 +75,7 @@
     "typescript",
     "json",
     "go",
+    "html",
     "proto"
   ],
   "prettier.tabWidth": 4,

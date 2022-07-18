@@ -33,6 +33,6 @@ call plug#begin(s:plug_dir)
   Plug 'airblade/vim-gitgutter'
   
   " Angular
-  "Plug 'burnettk/vim-angular'
+  Plug 'burnettk/vim-angular'
   
 call plug#end()
