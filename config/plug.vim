@@ -34,5 +34,13 @@ call plug#begin(s:plug_dir)
   
   " Angular
   Plug 'burnettk/vim-angular'
+
+  " Css
+  "Plug 'ap/vim-css-color'
+  Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+  
+  " AutoTag
+  Plug 'craigemery/vim-autotag'
+
   
 call plug#end()

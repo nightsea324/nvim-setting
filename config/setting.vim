@@ -43,10 +43,12 @@
   inoremap ( ()<ESC>i
   inoremap [ []<ESC>i
   inoremap { {}<ESC>i
-  inoremap < <><ESC>i
   inoremap ' ''<ESC>i
   inoremap " ""<ESC>i
   inoremap ` ``<ESC>i
 
 " NoHighlight
   nmap <space>/ :noh <CR>
+
+" CssColor
+  let g:Hexokinase_ftEnabled = ['css']
