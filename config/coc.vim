@@ -1,6 +1,16 @@
 " coc.vim => For coc config
 
 if isdirectory(expand('~/.vim/plugged/coc.nvim'))
+  " coc extensions
+  let g:coc_global_extensions = [
+  \   'coc-css',
+  \   'coc-explorer',
+  \   'coc-angular',
+  \   'coc-html',
+  \   'coc-json',
+  \   'coc-prettier',
+  \   'coc-tsserver',
+  \ ]
   " coc_explorer setting
   let g:coc_explorer_global_presets = {
   \   '.vim': {
@@ -52,13 +62,15 @@ if isdirectory(expand('~/.vim/plugged/coc.nvim'))
   nmap <silent> gi <Plug>(coc-implementation)
   nmap <silent> gr <Plug>(coc-references)
 
-  nnoremap <silent> gh :call ShowDocumentation()<CR>
+  nnoremap <silent> gh :call <SID>show_documentation()<CR>
 
-  function! ShowDocumentation()
-    if CocAction('hasProvider', 'hover')
+  function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+      execute 'h '.expand('<cword>')
+    elseif (coc#rpc#ready())
       call CocActionAsync('doHover')
     else
-      call feedkeys('K', 'in')
+      execute '!' . &keywordprg . " " . expand('<cword>')
     endif
   endfunction
 

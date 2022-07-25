@@ -16,11 +16,13 @@ call plug#begin(s:plug_dir)
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
   " FZF
-  Plug 'junegunn/fzf.vim'
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
+  " Plug 'junegunn/fzf.vim'
+  " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  " Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
+  " Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
+  
+  " commenter
   Plug 'preservim/nerdcommenter'
-  Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 
   " JavaScript
   Plug 'sheerun/vim-polyglot'
@@ -32,11 +34,7 @@ call plug#begin(s:plug_dir)
   " git 
   Plug 'airblade/vim-gitgutter'
   
-  " Angular
-  "Plug 'burnettk/vim-angular'
-
   " Css
-  "Plug 'ap/vim-css-color'
   Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
   
   " AutoTag

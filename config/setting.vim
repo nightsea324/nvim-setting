@@ -4,7 +4,8 @@
   set number                    " 設定行號
   set clipboard=unnamed         " 允許使用複製貼上
   set encoding=utf-8
-  set cursorline                " 加強顯示鼠標位置
+  set cursorline                " 加強顯示鼠標位置(水平)
+  set cursorcolumn              " 加強顯示鼠標位置(垂直)
   scriptencoding utf-8
   set mouse=a                   " 啟用滑鼠
 " formatting
@@ -52,3 +53,7 @@
 
 " CssColor
   let g:Hexokinase_ftEnabled = ['css']
+
+" Commenter
+  let g:NERDSpaceDelims = 1
+
