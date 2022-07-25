@@ -21,7 +21,7 @@ call plug#begin(s:plug_dir)
   " Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
   " Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
   
-  " commenter
+  " Commenter
   Plug 'preservim/nerdcommenter'
 
   " JavaScript

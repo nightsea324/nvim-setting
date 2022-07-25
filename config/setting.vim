@@ -11,10 +11,10 @@
 " formatting
   set nowrap            " Do not wrap long lines
   set smartindent       " 自動縮排
-  set shiftwidth=4      " tab長度
+  set shiftwidth=2      " tab長度
   set expandtab         " Tabs are spaces, not tabs
-  set tabstop=4         " 縮排空格數
-  set softtabstop=4     " Let backspace delete indent
+  set tabstop=2         " 縮排空格數
+  set softtabstop=2     " Let backspace delete indent
   set nojoinspaces      " Prevents inserting two spaces after punctuation on a join (J)
   set splitright        " Puts new vsplit windows to the right of the current
   set splitbelow        " Puts new split windows to the bottom of the current
