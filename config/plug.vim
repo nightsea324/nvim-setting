@@ -33,7 +33,7 @@ call plug#begin(s:plug_dir)
   Plug 'airblade/vim-gitgutter'
   
   " Angular
-  Plug 'burnettk/vim-angular'
+  "Plug 'burnettk/vim-angular'
 
   " Css
   "Plug 'ap/vim-css-color'
@@ -41,6 +41,9 @@ call plug#begin(s:plug_dir)
   
   " AutoTag
   Plug 'craigemery/vim-autotag'
+
+  " Welcome
+  Plug 'mhinz/vim-startify'
 
   
 call plug#end()
