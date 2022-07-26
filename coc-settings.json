@@ -83,15 +83,10 @@
   "prettier.singleQuote": true,
   "prettier.arrowParens": "avoid",
   // tsserver
-  "tsserver.enable": true
+  "tsserver.enable": true,
   // snippets
-  //"snippets.extends":{
-      //"js": ["javascript"],
-      //"javascriptreact": ["javascript"],
-      //"typescript": ["javascript"]
-  //},
-    // eslint
-  //"eslint.enable": false,
-  //"eslint.run": "onSave",
-  //"eslint.autoFixOnSave": true,
+  "snippets.extends": {
+    "javascript":["javascript"],
+    "typescript":["javascript"]
+  }
 }

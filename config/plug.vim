@@ -15,12 +15,6 @@ call plug#begin(s:plug_dir)
   " Coc
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-  " FZF
-  " Plug 'junegunn/fzf.vim'
-  " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  " Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
-  " Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
-  
   " Commenter
   Plug 'preservim/nerdcommenter'
 
@@ -42,6 +36,4 @@ call plug#begin(s:plug_dir)
 
   " Welcome
   Plug 'mhinz/vim-startify'
-
-  
 call plug#end()
