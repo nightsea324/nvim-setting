@@ -27,14 +27,14 @@
   let g:rainbow_active = 1     " 括弧彩虹
 
 " key mapping
-  let mapleader =','          " set the key map leader
-  let maplocalleader = '_'
+  let mapleader =','
 
-" Easier Moving
-  map <C-J> <C-W>j<C-W>_
-  map <C-K> <C-W>k<C-W>_
-  map <C-L> <C-W>l<C-W>_
-  map <C-H> <C-W>h<C-W>_
+" split windows controll
+" easier Moving
+  map <C-J> <C-W>j
+  map <C-K> <C-W>k
+  map <C-L> <C-W>l
+  map <C-H> <C-W>h
 
 " QuickSave
   nmap <space>w :w <CR>

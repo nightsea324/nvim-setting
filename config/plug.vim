@@ -4,7 +4,6 @@
 let s:plug_dir = '~/.vim/plugged'
 
 call plug#begin(s:plug_dir)
-
   " Airline
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
@@ -18,22 +17,12 @@ call plug#begin(s:plug_dir)
   " Commenter
   Plug 'preservim/nerdcommenter'
 
-  " JavaScript
-  Plug 'sheerun/vim-polyglot'
-  Plug 'prabirshrestha/vim-lsp'
-
-  " Ale
-  Plug 'dense-analysis/ale'
-
   " git 
   Plug 'airblade/vim-gitgutter'
-  
-  " Css
-  Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-  
+ 
   " AutoTag
   Plug 'craigemery/vim-autotag'
 
-  " Welcome
+  " Startify
   Plug 'mhinz/vim-startify'
 call plug#end()
