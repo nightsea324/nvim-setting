@@ -56,3 +56,7 @@
 
 " Commenter
   let g:NERDSpaceDelims = 1
+
+" Jsdoc
+  nmap <space>d :JsDoc <CR>
+  let g:jsdoc_formatter='tsdoc'

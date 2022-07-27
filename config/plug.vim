@@ -25,4 +25,13 @@ call plug#begin(s:plug_dir)
 
   " Startify
   Plug 'mhinz/vim-startify'
+
+  " CssColor
+  Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
+  " Jsdoc
+  Plug 'heavenshell/vim-jsdoc', {
+  \ 'for': ['javascript', 'javascript.jsx','typescript'],
+  \ 'do': 'make install'
+  \}
 call plug#end()
