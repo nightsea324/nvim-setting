@@ -56,7 +56,14 @@
 
 " Commenter
   let g:NERDSpaceDelims = 1
+  let g:NERDCustomDelimiters = {
+    \ 'typescript': { 'left': '/**', 'right':'*/'},
+    \ 'javascript': { 'left': '/**', 'right':'*/'},
+    \ }
 
 " Jsdoc
   nmap <space>d :JsDoc <CR>
   let g:jsdoc_formatter='tsdoc'
+  if isdirectory(expand('~/js/template.js'))
+    let g:jsdoc_templates_path = "~/js/template.js"
+  endif
