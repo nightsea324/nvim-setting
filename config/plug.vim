@@ -18,7 +18,7 @@ call plug#begin(s:plug_dir)
   Plug 'preservim/nerdcommenter'
 
   " git 
-  Plug 'airblade/vim-gitgutter'
+  " Plug 'airblade/vim-gitgutter'
  
   " AutoTag
   Plug 'craigemery/vim-autotag'
