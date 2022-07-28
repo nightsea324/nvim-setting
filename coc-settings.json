@@ -83,5 +83,7 @@
     "snippets.extends": {
         "javascript": ["javascript"],
         "typescript": ["javascript"]
-    }
+    },
+    "git.addGBlameToVirtualText": true,
+    "git.blameUseRealTime": true
 }
