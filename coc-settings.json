@@ -1,7 +1,6 @@
 {
     "json.enable": true,
     "json.format.enable": true,
-    // explorer
     "explorer.presets": {
         ".vim": {
             "root-uri": "~/.vim"
@@ -20,7 +19,7 @@
     "explorer.file.showHiddenFiles": true,
     "explorer.icon.enableNerdfont": true,
     "explorer.keyMappings.global": {
-        "i": false, // cancel default mapkey
+        "i": false,
         "k": "nodePrev",
         "j": "nodeNext",
         "*": "toggleSelection",
@@ -67,7 +66,6 @@
         "<<": "gitStage",
         ">>": "gitUnstage"
     },
-    // coc format prettier
     "coc.preferences.formatOnSaveFiletypes": [
         "css",
         "yaml",
@@ -78,13 +76,10 @@
         "html",
         "proto"
     ],
-    // prettier
     "prettier.tabWidth": 4,
     "prettier.singleQuote": true,
     "prettier.arrowParens": "avoid",
-    // tsserver
     "tsserver.enable": true,
-    // snippets
     "snippets.extends": {
         "javascript": ["javascript"],
         "typescript": ["javascript"]
