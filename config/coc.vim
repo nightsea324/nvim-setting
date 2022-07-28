@@ -14,7 +14,7 @@ if isdirectory(expand('~/.vim/plugged/coc.nvim'))
   \   'coc-snippets',
   \   'coc-go',
   \ ]
-  " coc_explorer setting
+  " coc_explorer setting 
   let g:coc_explorer_global_presets = {
   \   '.vim': {
   \     'root-uri': '~/.vim',
@@ -55,16 +55,18 @@ if isdirectory(expand('~/.vim/plugged/coc.nvim'))
   \   },
   \}
 
+  " Open coc explorer
   nmap <space>ef :CocCommand explorer --preset floating<CR>
-  " List all presets
   nmap <space>ee :CocCommand explorer <cr>
+
+  " Fzf symbols Search
+  nnoremap <silent> <space>f       :<C-u>CocFzfList symbols<CR>
 
   " GoTo code navigation.
   nmap <silent> gd <Plug>(coc-definition)
   nmap <silent> gy <Plug>(coc-type-definition)
   nmap <silent> gi <Plug>(coc-implementation)
   nmap <silent> gr <Plug>(coc-references)
-
   nnoremap <silent> gh :call <SID>show_documentation()<CR>
 
   function! s:show_documentation()

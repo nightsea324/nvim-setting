@@ -34,4 +34,9 @@ call plug#begin(s:plug_dir)
   \ 'for': ['javascript', 'javascript.jsx','typescript'],
   \ 'do': 'make install'
   \}
+
+  " Fzf
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+  Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 call plug#end()
