@@ -13,6 +13,7 @@ if isdirectory(expand('~/.vim/plugged/coc.nvim'))
   \   'coc-vimlsp',
   \   'coc-snippets',
   \   'coc-go',
+  \   'coc-git',
   \ ]
   " coc_explorer setting 
   let g:coc_explorer_global_presets = {
