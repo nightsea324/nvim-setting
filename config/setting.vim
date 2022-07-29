@@ -64,6 +64,6 @@
 " Jsdoc
   nmap <space>d :JsDoc <CR>
   let g:jsdoc_formatter='tsdoc'
-  if isdirectory(expand('~/js/template.js'))
-    let g:jsdoc_templates_path = "~/js/template.js"
+  if filewritable(expand('~/.config/nvim/config/template.js'))
+    let g:jsdoc_templates_path = "~/.config/nvim/config/template.js"
   endif

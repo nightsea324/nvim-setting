@@ -85,5 +85,6 @@
         "typescript": ["javascript"]
     },
     "git.addGBlameToVirtualText": true,
-    "git.blameUseRealTime": true
+    "git.blameUseRealTime": true,
+    "git.enableGutters": false
 }
