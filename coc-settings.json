@@ -86,5 +86,5 @@
     },
     "git.addGBlameToVirtualText": true,
     "git.blameUseRealTime": true,
-    "git.enableGutters": false
+    "git.enableGutters": true
 }

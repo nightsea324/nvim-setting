@@ -29,10 +29,10 @@ module.exports = {
             doc.params.length === 0
                 ? `
 /**
- * ${doc.name}`
+ * ${doc.name} - `
                 : `
 /**
- * ${doc.name}
+ * ${doc.name} - 
  *
  * @param ${doc.params.map(p => `${p.name} - ${p.type}`).join('\n * @param ')}`;
 
@@ -44,7 +44,7 @@ module.exports = {
 
         const end = doc.returnType
             ? `
- * @returns - ${doc.returnType}
+ * @returns ${doc.returnType}
  */`
             : `
  */`;
