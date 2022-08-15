@@ -77,8 +77,8 @@
         "proto"
     ],
     "prettier.tabWidth": 4,
-    "prettier.singleQuote": true,
-    "prettier.arrowParens": "avoid",
+    "prettier.singleQuote": false,
+    "prettier.arrowParens": "always",
     "tsserver.enable": true,
     "snippets.extends": {
         "javascript": ["javascript"],

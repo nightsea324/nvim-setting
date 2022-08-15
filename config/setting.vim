@@ -52,7 +52,7 @@
   nmap <space>/ :noh <CR>
 
 " CssColor
-  let g:Hexokinase_ftEnabled = ['css']
+  let g:Hexokinase_ftEnabled = ['css', 'scss']
 
 " Commenter
   let g:NERDSpaceDelims = 1
