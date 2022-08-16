@@ -67,3 +67,7 @@
   if filewritable(expand('~/.config/nvim/config/template.js'))
     let g:jsdoc_templates_path = "~/.config/nvim/config/template.js"
   endif
+  
+" Airline
+  let g:airline_section_c = '%t%m%r'
+  let g:airline_section_z = '%c:%l/%L'
