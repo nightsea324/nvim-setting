@@ -9,8 +9,6 @@
   scriptencoding utf-8
   set mouse=a                   " 啟用滑鼠
 " formatting
-  set wrap              " 自動換行
-  set linebreak         " 換行根據單字
   set smartindent       " 自動縮排
   set shiftwidth=2      " tab長度
   set expandtab         " Tabs are spaces, not tabs
