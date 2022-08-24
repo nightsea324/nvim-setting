@@ -28,7 +28,7 @@
         "J": ["toggleSelection", "nodeNext"],
         "K": ["toggleSelection", "nodePrev"],
         "gl": "expandRecursive",
-        "gh": "collapseRecursive",
+        "gk": "collapseRecursive",
         "o": ["expanded?", "collapse", "expand"],
         "<cr>": ["expandable?", "cd", "open"],
         "e": "open",
@@ -37,6 +37,7 @@
         "t": "open:tab",
         "<bs>": "gotoParent",
         "gp": "preview:labeling",
+        "gh": "preview:content",
         "y": "copyFilepath",
         "Y": "copyFilename",
         "c": "copyFile",
@@ -68,6 +69,7 @@
     },
     "coc.preferences.formatOnSaveFiletypes": [
         "css",
+        "scss",
         "yaml",
         "javascript",
         "typescript",
@@ -77,6 +79,7 @@
         "proto"
     ],
     "prettier.tabWidth": 4,
+    "prettier.printWidth": 100,
     "tsserver.enable": true,
     "snippets.extends": {
         "javascript": ["javascript"],

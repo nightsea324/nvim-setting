@@ -39,14 +39,6 @@
   nmap <space>w :w <CR>
   nmap <space>q :q <CR>
 
-" 自動補齊括號、引號
-  inoremap ( ()<ESC>i
-  inoremap [ []<ESC>i
-  inoremap { {}<ESC>i
-  inoremap ' ''<ESC>i
-  inoremap " ""<ESC>i
-  inoremap ` ``<ESC>i
-
 " NoHighlight
   nmap <space>/ :noh <CR>
 
@@ -70,3 +62,6 @@
 " Airline
   let g:airline_section_c = '%t%m%r'
   let g:airline_section_z = '%c:%l/%L'
+
+" fix syntax
+  autocmd BufEnter * :syntax sync fromstart

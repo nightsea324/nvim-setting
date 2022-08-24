@@ -79,5 +79,10 @@ if isdirectory(expand('~/.vim/plugged/coc.nvim'))
       execute '!' . &keywordprg . " " . expand('<cword>')
     endif
   endfunction
-
+  
+  inoremap <silent><expr> <c-f> coc#pum#visible() ? coc#pum#confirm()
+                                \: "\<c-g>u\<cr>\<c-r>=coc#on_enter()\<cr>"
+  nmap <silent> [g <Plug>(coc-diagnostic-prev)
+  nmap <silent> ]g <Plug>(coc-diagnostic-next)
+  
 endif
