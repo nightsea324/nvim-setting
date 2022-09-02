@@ -47,10 +47,6 @@
 
 " Commenter
   let g:NERDSpaceDelims = 1
-  let g:NERDCustomDelimiters = {
-    \ 'typescript': { 'left': '/**', 'right':'*/'},
-    \ 'javascript': { 'left': '/**', 'right':'*/'},
-    \ }
 
 " Jsdoc
   nmap <space>d :JsDoc <CR>

@@ -57,11 +57,11 @@ if isdirectory(expand('~/.vim/plugged/coc.nvim'))
   \}
 
   " Open coc explorer
-  nmap <space>ef :CocCommand explorer --preset floating<CR>
-  nmap <space>ee :CocCommand explorer <cr>
+  nmap <silent><space>ef :CocCommand explorer --preset floating<CR>
+  nmap <silent><space>ee :CocCommand explorer <cr>
 
   " Fzf symbols Search
-  nnoremap <silent> <space>f       :<C-u>CocFzfList symbols<CR>
+  nnoremap <silent><space>f       :<C-u>CocFzfList symbols<CR>
 
   " GoTo code navigation.
   nmap <silent> gd <Plug>(coc-definition)
@@ -85,4 +85,10 @@ if isdirectory(expand('~/.vim/plugged/coc.nvim'))
   nmap <silent> [g <Plug>(coc-diagnostic-prev)
   nmap <silent> ]g <Plug>(coc-diagnostic-next)
   
+  " navigate chunks of current buffer
+  nmap <silent> gk <Plug>(coc-git-prevchunk)
+  nmap <silent> gj <Plug>(coc-git-nextchunk)
+  " show chunk diff at current position
+  nmap gs <Plug>(coc-git-chunkinfo)
+  inoremap <silent><expr> <c-\> coc#refresh()
 endif
