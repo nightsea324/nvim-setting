@@ -30,4 +30,6 @@ if isdirectory(expand('~/.vim/plugged/vim-startify'))
   let g:startify_bookmarks = [ {'c': '~/.config'}, {'z':'~/.zshrc'} ]
   " list number
   let g:startify_files_number = 20
+  " chdir
+  let g:startify_change_to_dir = 0
 endif

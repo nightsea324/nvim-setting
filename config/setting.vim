@@ -9,7 +9,6 @@
   scriptencoding utf-8
   set mouse=a                   " 啟用滑鼠
 " formatting
-  set nowrap            " Do not wrap long lines
   set smartindent       " 自動縮排
   set shiftwidth=2      " tab長度
   set expandtab         " Tabs are spaces, not tabs
@@ -40,26 +39,14 @@
   nmap <space>w :w <CR>
   nmap <space>q :q <CR>
 
-" 自動補齊括號、引號
-  inoremap ( ()<ESC>i
-  inoremap [ []<ESC>i
-  inoremap { {}<ESC>i
-  inoremap ' ''<ESC>i
-  inoremap " ""<ESC>i
-  inoremap ` ``<ESC>i
-
 " NoHighlight
   nmap <space>/ :noh <CR>
 
 " CssColor
-  let g:Hexokinase_ftEnabled = ['css']
+  let g:Hexokinase_ftEnabled = ['css', 'scss']
 
 " Commenter
   let g:NERDSpaceDelims = 1
-  let g:NERDCustomDelimiters = {
-    \ 'typescript': { 'left': '/**', 'right':'*/'},
-    \ 'javascript': { 'left': '/**', 'right':'*/'},
-    \ }
 
 " Jsdoc
   nmap <space>d :JsDoc <CR>
@@ -67,3 +54,10 @@
   if filewritable(expand('~/.config/nvim/config/template.js'))
     let g:jsdoc_templates_path = "~/.config/nvim/config/template.js"
   endif
+  
+" Airline
+  let g:airline_section_c = '%t%m%r'
+  let g:airline_section_z = '%c:%l/%L'
+
+" fix syntax
+  autocmd BufEnter * :syntax sync fromstart
