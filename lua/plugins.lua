@@ -20,13 +20,16 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
   use 'hrsh7th/nvim-cmp' -- Completion
   use 'neovim/nvim-lspconfig' -- LSP
+  use 'glepnir/lspsaga.nvim' -- LSP UIs
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
 
+  use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
+  use 'norcalli/nvim-colorizer.lua'
 end)
