@@ -26,6 +26,11 @@
   set nojoinspaces  " Prevents inserting two spaces after punctuation on a join (J)
   set splitright  " Puts new vsplit windows to the right of the current
   set splitbelow  " Puts new split windows to the bottom of the current
+  set winblend=0
+  set pumblend=0
+  set signcolumn=yes:1
+  set nobackup
+  set nowritebackup
 
 " color-schema
   syntax on
@@ -69,4 +74,4 @@
   let g:airline_section_z = '%c:%l/%L'
 
 " fix syntax
-  autocmd BufEnter * :syntax sync fromstart
+  " autocmd BufEnter * :syntax sync fromstart

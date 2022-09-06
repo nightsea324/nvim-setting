@@ -68,6 +68,8 @@ if isdirectory(expand('~/.vim/plugged/coc.nvim'))
   nmap <silent> gy <Plug>(coc-type-definition)
   nmap <silent> gi <Plug>(coc-implementation)
   nmap <silent> gr <Plug>(coc-references)
+  nmap <silent> <F2> <Plug>(coc-rename)
+  nmap <silent> <F4> <Plug>(coc-codeaction-selected)
   nnoremap <silent> gh :call <SID>show_documentation()<CR>
 
   function! s:show_documentation()
@@ -91,4 +93,6 @@ if isdirectory(expand('~/.vim/plugged/coc.nvim'))
   " show chunk diff at current position
   nmap gs <Plug>(coc-git-chunkinfo)
   inoremap <silent><expr> <c-\> coc#refresh()
+
+  autocmd CursorHold * silent call CocActionAsync('highlight')
 endif
