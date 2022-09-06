@@ -24,6 +24,7 @@ telescope.setup {
       theme = "dropdown",
       previewer = false,
       grouped = true,
+      hidden = true,
       layout_config = { height = 40 },
       -- disables netrw and use telescope-file-browser in its place
       hijack_netrw = true,
@@ -42,6 +43,7 @@ telescope.setup {
           ["v"] = actions.select_vertical,
           ["l"] = actions.select_default,
           ["h"] = fb_actions.goto_parent_dir,
+          ["<BackSpace>"] = fb_actions.goto_parent_dir,
           ["/"] = function()
             vim.cmd('startinsert')
           end
@@ -53,10 +55,9 @@ telescope.setup {
 
 telescope.load_extension("file_browser")
 
-vim.keymap.set('n', ';f',
+vim.keymap.set('n', '<space>f',
   function()
     builtin.find_files({
-      no_ignore = false,
       hidden = true
     })
   end)
@@ -69,7 +70,7 @@ end)
 vim.keymap.set('n', '<space>t', function()
   builtin.help_tags()
 end)
-vim.keymap.set('n', ';;', function()
+vim.keymap.set('n', '<space>ee', function()
   builtin.resume()
 end)
 vim.keymap.set('n', ';e', function()

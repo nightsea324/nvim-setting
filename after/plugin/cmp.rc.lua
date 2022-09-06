@@ -5,8 +5,11 @@ local lspkind = require 'lspkind'
 cmp.setup({
   snippet = {
     expand = function(args)
-      require('luasnip').lsp.expand(args.body)
+      require('luasnip').lsp_expand(args.body)
     end
+  },
+  view = {
+    entries = { name = 'custom', selection_order = 'near_cursor' }
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-r>'] = cmp.mapping.complete(),
@@ -18,6 +21,7 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
+    { name = 'luasnip' },
     { name = 'buffer' }
   }),
   formmating = {
