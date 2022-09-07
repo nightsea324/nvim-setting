@@ -65,16 +65,22 @@ vim.keymap.set('n', '<space>r', function()
   builtin.live_grep()
 end)
 vim.keymap.set('n', '\\\\', function()
-  builtin.buffers()
+  builtin.buffers({
+    initial_mode = "normal",
+  })
 end)
 vim.keymap.set('n', '<space>t', function()
   builtin.help_tags()
 end)
-vim.keymap.set('n', '<space>ee', function()
-  builtin.resume()
+vim.keymap.set('n', ';;', function()
+  builtin.resume({
+    initial_mode = "normal",
+  })
 end)
 vim.keymap.set('n', ';e', function()
-  builtin.diagnostics()
+  builtin.diagnostics({
+    initial_mode = "normal",
+  })
 end)
 vim.keymap.set("n", "<space>ef", function()
   telescope.extensions.file_browser.file_browser({
