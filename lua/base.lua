@@ -32,6 +32,7 @@ vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+vim.opt.signcolumn = "yes:1"
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])

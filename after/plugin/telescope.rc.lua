@@ -11,7 +11,6 @@ local fb_actions = require "telescope".extensions.file_browser.actions
 
 telescope.setup {
   defaults = {
-    initial_mode = "normal",
     mappings = {
       n = {
         ["<space>q"] = actions.close,
@@ -23,8 +22,9 @@ telescope.setup {
     file_browser = {
       theme = "dropdown",
       previewer = false,
-      grouped = true,
+      initial_mode = "normal",
       hidden = true,
+      grouped = true,
       layout_config = { height = 40 },
       -- disables netrw and use telescope-file-browser in its place
       hijack_netrw = true,

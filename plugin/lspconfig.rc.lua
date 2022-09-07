@@ -40,3 +40,22 @@ nvim_lsp.sumneko_lua.setup {
     },
   },
 }
+
+local project_library_path = "Users/nightsea/node_modules"
+
+local cmd = { "ngserver", "--stdio", "--tsProbeLocations", project_library_path, "--ngProbeLocations", project_library_path }
+
+nvim_lsp.angularls.setup {
+  cmd = cmd,
+  on_new_config = function(new_config)
+    new_config.cmd = cmd
+  end,
+}
+
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = false,
+  underline = true,
+  update_in_insert = true,
+  severity_sort = false,
+})
