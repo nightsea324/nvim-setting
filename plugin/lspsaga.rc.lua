@@ -18,7 +18,7 @@ saga.init_lsp_saga {
     sign = false,
   },
   finder_action_keys = {
-    open = "o",
+    open = { "o", "<Return>" },
     vsplit = "v",
     split = "s",
     tabe = "t",

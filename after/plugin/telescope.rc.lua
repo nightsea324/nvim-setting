@@ -77,7 +77,7 @@ vim.keymap.set('n', ';;', function()
     initial_mode = "normal",
   })
 end)
-vim.keymap.set('n', ';e', function()
+vim.keymap.set('n', '<space>e', function()
   builtin.diagnostics({
     initial_mode = "normal",
   })

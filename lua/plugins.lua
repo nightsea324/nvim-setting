@@ -42,4 +42,5 @@ packer.startup(function(use)
   use 'dinhhuy258/git.nvim'
 
   use 'terrortylor/nvim-comment'
+  use 'lukas-reineke/indent-blankline.nvim'
 end)
