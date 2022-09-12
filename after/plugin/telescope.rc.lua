@@ -15,6 +15,7 @@ telescope.setup {
       n = {
         ["<space>q"] = actions.close,
         ["<space>ef"] = actions.close,
+        ["<Esc>"] = actions.close,
       },
     },
   },
@@ -25,7 +26,10 @@ telescope.setup {
       initial_mode = "normal",
       hidden = true,
       grouped = true,
-      layout_config = { height = 40 },
+      respect_gitignore = false,
+      layout_config = {
+        height = 40,
+      },
       -- disables netrw and use telescope-file-browser in its place
       hijack_netrw = true,
       mappings = {
@@ -86,11 +90,5 @@ vim.keymap.set("n", "<space>ef", function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",
     cwd = telescope_buffer_dir(),
-    respect_gitignore = false,
-    hidden = true,
-    grouped = true,
-    previewer = false,
-    initial_mode = "normal",
-    layout_config = { height = 40 }
   })
 end)
