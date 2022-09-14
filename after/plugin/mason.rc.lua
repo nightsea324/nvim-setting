@@ -20,3 +20,8 @@ require 'lspconfig'.cssls.setup {
 require 'lspconfig'.html.setup {
   capabilities = capabilities,
 }
+
+require 'lspconfig'.cssmodules_ls.setup {
+  capabilities = capabilities,
+}
+
