@@ -1,13 +1,13 @@
 # nvim-setting
 
 ## Default
-- Angular
-## Angular config
+- Lua
+## Lua config
   ```shell
-  git checkout angular
+  git checkout lua
   ```
 
-## Go config
+## coc config
   ```shell
-  git checkout go
+  git checkout coc
   ```
