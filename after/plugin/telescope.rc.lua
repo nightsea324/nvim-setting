@@ -18,6 +18,8 @@ telescope.setup {
         ["<Esc>"] = actions.close,
       },
     },
+    scroll_strategy = "limit",
+    path_display = { "smart" }
   },
   extensions = {
     file_browser = {
@@ -32,6 +34,8 @@ telescope.setup {
       },
       -- disables netrw and use telescope-file-browser in its place
       hijack_netrw = true,
+      path_display = { "tail" },
+      hide_parent_dir = true,
       mappings = {
         -- your custom insert mode mappings
         ["i"] = {
