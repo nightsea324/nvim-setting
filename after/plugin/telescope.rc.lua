@@ -19,7 +19,7 @@ telescope.setup {
       },
     },
     scroll_strategy = "limit",
-    path_display = { "smart" }
+    hidden = false,
   },
   extensions = {
     file_browser = {
@@ -65,9 +65,7 @@ telescope.load_extension("file_browser")
 
 vim.keymap.set('n', '<space>f',
   function()
-    builtin.find_files({
-      hidden = true
-    })
+    builtin.find_files()
   end)
 vim.keymap.set('n', '<space>r', function()
   builtin.live_grep()
