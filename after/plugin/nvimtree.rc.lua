@@ -14,18 +14,20 @@ nvim_tree.setup({
     mappings = {
       list = {
         { key = "<BS>", action = "dir_up" },
+        { key = "<CR>", action = "cd" },
         { key = "l", action = "edit" },
         { key = "h", action = "close_node" },
         { key = "H", action = "collapse_all" },
         { key = "v", action = "vsplit" },
         { key = "s", action = "split" },
+        { key = "gh", action = "toggle_file_info" },
       },
     },
     float = {
       enable = true,
       open_win_config = {
         relative = "editor",
-        border = "rounded",
+        border = "shadow",
         width = math.floor(vim.fn.winwidth(0) / 2),
         height = math.floor(vim.fn.winheight(0) / 5 * 3),
         row = math.floor(vim.fn.winheight(0) / 5),
