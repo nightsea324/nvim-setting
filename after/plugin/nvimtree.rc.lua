@@ -36,6 +36,7 @@ nvim_tree.setup({
     },
   },
   renderer = {
+    highlight_git = true,
     group_empty = true,
     indent_markers = {
       enable = true,
@@ -46,6 +47,11 @@ nvim_tree.setup({
         item = "│",
         bottom = "─",
         none = " ",
+      },
+    },
+    icons = {
+      show = {
+        git = false,
       },
     },
     special_files = {},
@@ -60,5 +66,11 @@ nvim_tree.setup({
       warning = "",
       error = "",
     },
+  },
+  git = {
+    enable = true,
+    ignore = true,
+    timeout = 400,
+    show_on_dirs = true,
   },
 })
