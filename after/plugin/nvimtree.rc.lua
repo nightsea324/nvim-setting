@@ -34,7 +34,6 @@ nvim_tree.setup({
         col = math.floor(vim.fn.winwidth(0) / 4),
       },
     },
-
   },
   renderer = {
     group_empty = true,
@@ -60,20 +59,6 @@ nvim_tree.setup({
       info = "",
       warning = "",
       error = "",
-    },
-  },
-  actions = {
-    open_file = {
-      quit_on_open = false,
-    },
-    file_popup = {
-      open_win_config = {
-        col = 1,
-        row = 1,
-        relative = "cursor",
-        border = "rounded",
-        style = "minimal",
-      },
     },
   },
 })

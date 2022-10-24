@@ -32,16 +32,18 @@ packer.startup(function(use)
   }
 
   use 'kyazdani42/nvim-web-devicons' -- File icons
-  -- use 'nvim-telescope/telescope.nvim'
-  -- use 'nvim-telescope/telescope-file-browser.nvim'
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-file-browser.nvim'
   use 'kyazdani42/nvim-tree.lua'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   use 'norcalli/nvim-colorizer.lua'
 
   use 'lewis6991/gitsigns.nvim'
-  use 'dinhhuy258/git.nvim'
+  -- use 'dinhhuy258/git.nvim'
 
   use 'terrortylor/nvim-comment'
   use 'lukas-reineke/indent-blankline.nvim'
+  -- use "akinsho/toggleterm.nvim"
+  use 'goolord/alpha-nvim'
 end)

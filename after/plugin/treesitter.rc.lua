@@ -23,7 +23,8 @@ ts.setup {
     "css",
     "scss",
     "html",
-    "lua"
+    "lua",
+    "graphql",
   },
   autotag = {
     enable = true,

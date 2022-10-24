@@ -25,3 +25,18 @@ require 'lspconfig'.cssmodules_ls.setup {
   capabilities = capabilities,
 }
 
+require 'lspconfig'.pylsp.setup {
+  capabilities = capabilities,
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = { 'W391' },
+          maxLineLength = 100
+        }
+      }
+    }
+  }
+}
+
+require 'lspconfig'.graphql.setup {}

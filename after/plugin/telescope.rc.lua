@@ -3,9 +3,9 @@ if (not status) then return end
 local actions = require('telescope.actions')
 local builtin = require("telescope.builtin")
 
-local function telescope_buffer_dir()
-  return vim.fn.expand('%:p:h')
-end
+-- local function telescope_buffer_dir()
+--   return vim.fn.expand('%:p:h')
+-- end
 
 local fb_actions = require "telescope".extensions.file_browser.actions
 
@@ -14,12 +14,13 @@ telescope.setup {
     mappings = {
       n = {
         ["<space>q"] = actions.close,
-        ["<space>ef"] = actions.close,
         ["<Esc>"] = actions.close,
       },
     },
     scroll_strategy = "limit",
     hidden = false,
+    file_ignore_patterns = { "node_modules/" },
+    path_display = { "tail" },
   },
   extensions = {
     file_browser = {
@@ -61,13 +62,11 @@ telescope.setup {
   },
 }
 
-telescope.load_extension("file_browser")
-
 vim.keymap.set('n', '<space>f',
   function()
     builtin.find_files()
   end)
-vim.keymap.set('n', '<space>r', function()
+vim.keymap.set('n', ';r', function()
   builtin.live_grep()
 end)
 vim.keymap.set('n', '\\\\', function()
@@ -75,22 +74,22 @@ vim.keymap.set('n', '\\\\', function()
     initial_mode = "normal",
   })
 end)
-vim.keymap.set('n', '<space>t', function()
-  builtin.help_tags()
-end)
 vim.keymap.set('n', ';;', function()
   builtin.resume({
     initial_mode = "normal",
   })
 end)
-vim.keymap.set('n', '<space>e', function()
+vim.keymap.set('n', ';e', function()
   builtin.diagnostics({
     initial_mode = "normal",
   })
 end)
-vim.keymap.set("n", "<space>ef", function()
-  telescope.extensions.file_browser.file_browser({
-    path = "%:p:h",
-    cwd = telescope_buffer_dir(),
-  })
-end)
+-- vim.keymap.set('n', '<space>t', function()
+--   builtin.help_tags()
+-- end)
+-- vim.keymap.set("n", "<space>ef", function()
+--   telescope.extensions.file_browser.file_browser({
+--     path = "%:p:h",
+--     cwd = telescope_buffer_dir(),
+--   })
+-- end)
