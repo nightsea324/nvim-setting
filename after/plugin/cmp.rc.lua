@@ -25,11 +25,19 @@ cmp.setup({
     { name = 'buffer' }
   }),
   formmating = {
-    format = lspkind.cmp_format({ wirth_text = false, maxwidth = 50 })
+    format = lspkind.cmp_format({
+      wirth_text = false,
+      maxwidth = 50,
+      mode = "symbol_text",
+      menu = ({
+        buffer = "[Buffer]",
+        nvim_lsp = "[LSP]",
+        luasnip = "[LuaSnip]",
+        nvim_lua = "[Lua]",
+        latex_symbols = "[Latex]",
+      })
+    }),
   }
 })
 
-vim.cmd [[
-  set completeopt=menuone,noinsert,noselect
-  highlight! default link CmpItemKind CmpItemMenuDefault
-]]
+vim.cmd [[set completeopt=menuone,noinsert,noselect]]

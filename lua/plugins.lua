@@ -8,10 +8,8 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-  use {
-    'RRethy/nvim-base16',
-    requires = { 'tjdevries/colorbuddy.nvim' }
-  }
+  use 'RRethy/nvim-base16'
+  use 'elvessousa/sobrio'
   use 'L3MON4D3/LuaSnip' -- Snippet
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'nvim-lua/plenary.nvim' -- Common utilities

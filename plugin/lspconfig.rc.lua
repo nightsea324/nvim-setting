@@ -3,14 +3,10 @@ if (not status) then return end
 
 local protocol = require('vim.lsp.protocol')
 
-local on_attach = function(client, bufnr)
-  -- formmating
-  if client.server_capabilities.documentFormattingProvider then
-    vim.api.nvim_command [[augroup Format]]
-    vim.api.nvim_command [[autocmd! * <buffer>]]
-    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync(nil,nil,{'null-ls','sumneko_lua'})]]
-    vim.api.nvim_command [[augroup END]]
-  end
+
+local on_attach = function(client, _)
+  -- client.resolved_capabilities.document_formatting = false
+  client.server_capabilities.documentFormattingProvider = false
 end
 
 protocol.CompletionItemKind = {
@@ -52,7 +48,14 @@ nvim_lsp.sourcekit.setup {
 }
 
 nvim_lsp.sumneko_lua.setup {
-  on_attach = on_attach,
+  on_attach = function(client, _)
+    if client.server_capabilities.documentFormattingProvider then
+      vim.api.nvim_command [[augroup Format]]
+      vim.api.nvim_command [[autocmd! * <buffer>]]
+      vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+      vim.api.nvim_command [[augroup END]]
+    end
+  end,
   settings = {
     Lua = {
       diagnostics = {
