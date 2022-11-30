@@ -19,7 +19,7 @@ telescope.setup {
     },
     scroll_strategy = "limit",
     hidden = false,
-    file_ignore_patterns = { "node_modules/" },
+    file_ignore_patterns = { "node_modules" },
     path_display = { "tail" },
   },
   extensions = {

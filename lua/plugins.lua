@@ -44,4 +44,8 @@ packer.startup(function(use)
   use 'lukas-reineke/indent-blankline.nvim'
   -- use "akinsho/toggleterm.nvim"
   use 'goolord/alpha-nvim'
+
+  -- go
+  use 'ray-x/go.nvim'
+  use 'ray-x/guihua.lua'
 end)

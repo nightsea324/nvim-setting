@@ -26,6 +26,7 @@ ts.setup {
     "html",
     "lua",
     "graphql",
+    "go",
   },
   sync_install = false,
   autotag = {
