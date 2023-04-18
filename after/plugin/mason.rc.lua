@@ -34,7 +34,7 @@ require 'lspconfig'.cssls.setup {
 
 require 'lspconfig'.html.setup {
   on_attach = on_attach,
-  filetypes = { "javascript", "html" },
+  filetypes = { "html" },
   capabilities = capabilities,
 }
 
@@ -46,8 +46,9 @@ require 'lspconfig'.pylsp.setup {
       plugins = {
         pycodestyle = {
           ignore = { 'W391' },
-          maxLineLength = 100
-        }
+          maxLineLength = 100,
+          indentSize = 4,
+        },
       }
     }
   }

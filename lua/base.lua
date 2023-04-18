@@ -13,14 +13,16 @@ vim.opt.backup = false
 vim.opt.showcmd = true
 vim.opt.cmdheight = 1
 vim.opt.laststatus = 2
-vim.opt.expandtab = true
 vim.opt.shell = 'fish'
 vim.opt.backupskip = '/tmp/*,/private/tmp/*'
 vim.opt.inccommand = 'split'
 vim.opt.ignorecase = true
+vim.opt.expandtab = true
+vim.opt.autoindent = true
 vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
 vim.opt.tabstop = 2
 vim.opt.clipboard:append { 'unnamedplus' }
 vim.opt.mouse = 'a'

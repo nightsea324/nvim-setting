@@ -7,8 +7,8 @@ ts.setup {
     disable = {},
   },
   indent = {
-    enable = true,
-    disable = {},
+    enable = false,
+    disable = { "python" },
   },
   auto_install = true,
   ensure_installed = {
@@ -27,6 +27,7 @@ ts.setup {
     "lua",
     "graphql",
     "go",
+    "markdown",
   },
   sync_install = false,
   autotag = {

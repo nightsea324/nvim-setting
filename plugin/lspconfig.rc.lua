@@ -72,7 +72,7 @@ nvim_lsp.sumneko_lua.setup {
   },
 }
 
-local project_library_path = "Users/nightsea/node_modules"
+local project_library_path = "./node_modules"
 
 local cmd = { "ngserver", "--stdio", "--tsProbeLocations", project_library_path, "--ngProbeLocations", project_library_path }
 

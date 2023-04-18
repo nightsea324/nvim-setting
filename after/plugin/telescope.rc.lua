@@ -84,6 +84,17 @@ vim.keymap.set('n', ';e', function()
     initial_mode = "normal",
   })
 end)
+
+require 'telescope'.setup {
+  extensions = {
+    media_files = {
+      -- filetypes whitelist
+      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+      filetypes = { "png", "webp", "jpg", "jpeg" },
+      find_cmd = "rg" -- find command (defaults to `fd`)
+    }
+  },
+}
 -- vim.keymap.set('n', '<space>t', function()
 --   builtin.help_tags()
 -- end)

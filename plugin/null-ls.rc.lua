@@ -3,7 +3,7 @@ if (not status) then return end
 
 null_ls.setup {
   sources = {
-    null_ls.builtins.formatting.prettierd
+    null_ls.builtins.formatting.prettierd,
   },
   on_attach = function(client, _)
     if client.server_capabilities.documentFormattingProvider then
