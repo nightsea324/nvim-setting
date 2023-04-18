@@ -12,3 +12,8 @@ keymap.set('n', '<C-l>', '<C-w>l')
 
 -- customize
 keymap.set('n', '<space>/', ':noh<Return>')
+
+-- copilot
+keymap.set('i', '“', '<Plug>(copilot-previous)')
+keymap.set('i', '‘', '<Plug>(copilot-next)')
+keymap.set('i', '«', '<Plug>(copilot-suggest)')

@@ -48,4 +48,7 @@ packer.startup(function(use)
   -- go
   use 'ray-x/go.nvim'
   use 'ray-x/guihua.lua'
+
+  -- copilot
+  use 'github/copilot.vim'
 end)
