@@ -3,7 +3,7 @@ if (not status) then return end
 
 ts.setup {
   highlight = {
-    enable = true,
+    enable = false,
     disable = {},
   },
   indent = {
@@ -28,6 +28,7 @@ ts.setup {
     "graphql",
     "go",
     "markdown",
+    "markdown_inline",
   },
   sync_install = false,
   autotag = {

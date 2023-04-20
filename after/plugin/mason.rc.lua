@@ -17,7 +17,7 @@ local on_attach_format = function(client, _)
   if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_command [[augroup Format]]
     vim.api.nvim_command [[autocmd! * <buffer>]]
-    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
     vim.api.nvim_command [[augroup END]]
   end
 end
@@ -63,4 +63,9 @@ require 'lspconfig'.gopls.setup {
   capabilities = capabilities,
   on_attach = on_attach_format,
   filetypes = { "go" },
+}
+
+require 'lspconfig'.angularls.setup {
+  on_attach = on_attach_format,
+  capabilities = capabilities,
 }

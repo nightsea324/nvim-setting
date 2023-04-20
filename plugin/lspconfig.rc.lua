@@ -47,12 +47,12 @@ nvim_lsp.sourcekit.setup {
   on_attach = on_attach,
 }
 
-nvim_lsp.sumneko_lua.setup {
+nvim_lsp.lua_ls.setup {
   on_attach = function(client, _)
     if client.server_capabilities.documentFormattingProvider then
       vim.api.nvim_command [[augroup Format]]
       vim.api.nvim_command [[autocmd! * <buffer>]]
-      vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+      vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
       vim.api.nvim_command [[augroup END]]
     end
   end,
@@ -76,12 +76,12 @@ local project_library_path = "./node_modules"
 
 local cmd = { "ngserver", "--stdio", "--tsProbeLocations", project_library_path, "--ngProbeLocations", project_library_path }
 
-nvim_lsp.angularls.setup {
-  cmd = cmd,
-  on_new_config = function(new_config)
-    new_config.cmd = cmd
-  end,
-}
+-- nvim_lsp.angularls.setup {
+--   cmd = cmd,
+--   on_new_config = function(new_config)
+--     new_config.cmd = cmd
+--   end,
+-- }
 
 vim.diagnostic.config({
   virtual_text = true,
