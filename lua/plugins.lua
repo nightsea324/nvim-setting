@@ -90,7 +90,7 @@ require('lazy').setup({
       ensure_installed = {
         'vue', 'typescript', 'javascript', 'tsx',
         'html', 'css', 'scss', 'json', 'yaml',
-        'lua', 'bash', 'fish',
+        'lua', 'bash',
         'graphql', 'go',
         'markdown', 'markdown_inline',
       },

@@ -14,8 +14,18 @@ vim.opt.backup = false
 vim.opt.showcmd = true
 vim.opt.cmdheight = 1
 vim.opt.laststatus = 2
-vim.opt.shell = 'fish'
-vim.opt.backupskip = '/tmp/*,/private/tmp/*'
+if vim.fn.has('win32') == 1 then
+  vim.opt.shell = vim.fn.executable('pwsh') == 1 and 'pwsh' or 'powershell'
+  vim.opt.shellcmdflag =
+    '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command '
+    .. '[Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;'
+  vim.opt.shellredir = '2>&1 | %%{ "$_" } | Out-File %s; exit $LastExitCode'
+  vim.opt.shellpipe = '2>&1 | %%{ "$_" } | tee %s; exit $LastExitCode'
+  vim.opt.shellquote = ''
+  vim.opt.shellxquote = ''
+else
+  vim.opt.shell = 'fish'
+end
 vim.opt.inccommand = 'split'
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
