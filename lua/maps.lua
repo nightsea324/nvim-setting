@@ -1,19 +1,16 @@
 local keymap = vim.keymap
+local opts = { noremap = true, silent = true }
 
-keymap.set('n', 'x', '"_x')
-keymap.set('n', '<space>w', ':w<Return>')
-keymap.set('n', '<space>q', ':q<Return>')
+-- ─── General ─────────────────────────────────────────────────────────────────
+keymap.set('n', 'x', '"_x', opts)                   -- black hole delete
+keymap.set('n', '<space>w', ':w<Return>', opts)      -- save
+keymap.set('n', '<space>q', ':q<Return>', opts)      -- quit
+keymap.set('n', '<space>/', ':noh<Return>', opts)    -- clear search highlight
 
--- easier move
-keymap.set('n', '<C-h>', '<C-w>h')
-keymap.set('n', '<C-j>', '<C-w>j')
-keymap.set('n', '<C-k>', '<C-w>k')
-keymap.set('n', '<C-l>', '<C-w>l')
+-- ─── Split navigation ────────────────────────────────────────────────────────
+keymap.set('n', '<C-h>', '<C-w>h', opts)
+keymap.set('n', '<C-j>', '<C-w>j', opts)
+keymap.set('n', '<C-k>', '<C-w>k', opts)
+keymap.set('n', '<C-l>', '<C-w>l', opts)
 
--- customize
-keymap.set('n', '<space>/', ':noh<Return>')
-
--- copilot
-keymap.set('i', '“', '<Plug>(copilot-previous)')
-keymap.set('i', '‘', '<Plug>(copilot-next)')
-keymap.set('i', '«', '<Plug>(copilot-suggest)')
+-- gt / gT → tab switching (vim built-in, no mapping needed)
