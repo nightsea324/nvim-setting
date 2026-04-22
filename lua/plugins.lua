@@ -368,7 +368,7 @@ require('lazy').setup({
 
       -- ── TypeScript + @vue/typescript-plugin for .vue files ──
       local vue_plugin_path = vim.fn.stdpath('data')
-        .. '/mason/packages/vue-language-server/node_modules/@vue/language-server'
+        .. '/mason/packages/vue-language-server/node_modules/@vue/typescript-plugin'
 
       vim.lsp.config('ts_ls', {
         init_options = {
